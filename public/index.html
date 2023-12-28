@@ -7873,7 +7873,7 @@
         margin: 1px;
         text-indent: -999px;
         cursor: pointer;
-        background-color: #000\9;
+        background-color: #0009;
         background-color: transparent;
         border: 1px solid #fff;
         border-radius: 10px
@@ -8408,7 +8408,6 @@
                             <li><a class=endpoint_menu href=#jump-Auth-Logout>Logout</a>
                             <li><a class=endpoint_menu href=#jump-Auth-Login>Login</a>
                             <li><a class=endpoint_menu href=#jump-Auth-Register>Register</a>
-                            <li><a class=endpoint_menu href=#jump-Auth-NewRequest>New Request</a>
                         </ul>
                     <li><strong><a href=#User>User</a></strong>
                         <ul>
@@ -8452,7 +8451,7 @@
                 <div class="panel panel-default">
                     <div class=panel-heading>
                         <h3 class=panel-title id=Auth>Auth
-                            <span class=badge>4</span>
+                            <span class=badge>3</span>
                         </h3>
                     </div>
                     <div class=panel-body>
@@ -8468,7 +8467,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/auth/logout
+                                                {{URL}}/auth/logout
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Auth-Logout class="panel-collapse collapse">
@@ -8476,19 +8475,24 @@
                                     </div>
                                 </div>
                                 <div class="panel panel-success" id=jump-Auth-Login>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-success data-toggle=collapse data-parent=#accordion-Auth
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Auth
                                             href=#collapse-Auth-Login>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>Login</strong>
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/auth/login
+                                                {{URL}}/auth/login
                                             </h4>
-                                        </a></div>
+                                        </a>
+                                    </div>
                                     <div id=collapse-Auth-Login class="panel-collapse collapse">
-                                        <div class=panel-body></div>
+                                        <div class=panel-body>
+                                            <h5 class="label label-primary">Body</h5><span
+                                                class=resp-prettyprint>{&#34;email&#34;:&#34;neena@gmail.com&#34;,&#34;password&#34;:&#34;secret&#34;}</span>
+                                            <div class=clearfix></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="panel panel-success" id=jump-Auth-Register>
@@ -8500,32 +8504,17 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/auth/register
+                                                {{URL}}/auth/register
                                             </h4>
                                         </a>
                                     </div>
                                     <div id=collapse-Auth-Register class="panel-collapse collapse">
                                         <div class=panel-body>
                                             <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
-                                                &#34;name&#34;:&#34;neena&#34;,&#34;password&#34;:&#34;secret&#34;,&#34;email&#34;:&#34;ntikoo@gmail.com&#34;
+                                                &#34;name&#34;:&#34;sona&#34;,&#34;password&#34;:&#34;secret&#34;,&#34;email&#34;:&#34;sona@gmail.com&#34;
                                                 }</span>
                                             <div class=clearfix></div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-info" id=jump-Auth-NewRequest>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-info data-toggle=collapse data-parent=#accordion-Auth
-                                            href=#collapse-Auth-NewRequest>
-                                            <h4 class=panel-title><span
-                                                    class="glyphicon glyphicon-plus"></span><strong>New Request</strong>
-                                                &nbsp;|&nbsp;
-                                                <strong class="request-method border-info">GET</strong>
-                                                &nbsp;
-                                            </h4>
-                                        </a></div>
-                                    <div id=collapse-Auth-NewRequest class="panel-collapse collapse">
-                                        <div class=panel-body></div>
                                     </div>
                                 </div>
                             </div>
@@ -8551,7 +8540,7 @@
                                                     Users</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/users
+                                                {{URL}}/users
                                             </h4>
                                         </a></div>
                                     <div id=collapse-User-GetAllUsers class="panel-collapse collapse">
@@ -8567,7 +8556,7 @@
                                                 &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/users/updateUser
+                                                {{URL}}/users/updateUser
                                             </h4>
                                         </a>
                                     </div>
@@ -8588,7 +8577,7 @@
                                                     Password</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/users/updatePassword
+                                                {{URL}}/users/updatePassword
                                             </h4>
                                         </a>
                                     </div>
@@ -8610,7 +8599,7 @@
                                                     User</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/users/showMe
+                                                {{URL}}/users/showMe
                                             </h4>
                                         </a></div>
                                     <div id=collapse-User-ShowCurrentUser class="panel-collapse collapse">
@@ -8626,7 +8615,7 @@
                                                     User</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/users/658329438fd453f71de494b4
+                                                {{URL}}/users/658329438fd453f71de494b4
                                             </h4>
                                         </a>
                                     </div>
@@ -8657,7 +8646,7 @@
                                                     product</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/products/65863bd0ba46a899ad1280c1
+                                                {{URL}}/products/65863c04ba46a899ad1280c5
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Product-Getsingleproduct class="panel-collapse collapse">
@@ -8673,7 +8662,7 @@
                                                     products</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/products
+                                                {{URL}}/products
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Product-Getallproducts class="panel-collapse collapse">
@@ -8681,35 +8670,51 @@
                                     </div>
                                 </div>
                                 <div class="panel panel-danger" id=jump-Product-DeleteProduct>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-danger data-toggle=collapse data-parent=#accordion-Product
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-danger data-toggle=collapse data-parent=#accordion-Product
                                             href=#collapse-Product-DeleteProduct>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>Delete
                                                     Product</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-danger">DELETE</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/products/delete
+                                                {{URL}}/products/658b22069b1cd9bfb48e8d0a
                                             </h4>
-                                        </a></div>
+                                        </a>
+                                    </div>
                                     <div id=collapse-Product-DeleteProduct class="panel-collapse collapse">
                                         <div class=panel-body></div>
                                     </div>
                                 </div>
                                 <div class="panel panel-success" id=jump-Product-UploadImage>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-success data-toggle=collapse data-parent=#accordion-Product
+                                    <div class=panel-heading><small class="pull-right text-muted">formdata</small>
+                                        <a class=text-success data-toggle=collapse data-parent=#accordion-Product
                                             href=#collapse-Product-UploadImage>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>Upload
                                                     Image</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/products/uploadImage
+                                                {{URL}}/products/uploadImage
                                             </h4>
-                                        </a></div>
+                                        </a>
+                                    </div>
                                     <div id=collapse-Product-UploadImage class="panel-collapse collapse">
-                                        <div class=panel-body></div>
+                                        <div class=panel-body>
+                                            <h5 class="label label-primary">Body</h5>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Key
+                                                        <th>Value
+                                                        <th>Description
+                                                <tbody>
+                                                    <tr>
+                                                        <td>image
+                                                        <td>
+                                                        <td>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="panel panel-success" id=jump-Product-CreateProduct>
@@ -8721,7 +8726,7 @@
                                                     Product</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/products
+                                                {{URL}}/products
                                             </h4>
                                         </a>
                                     </div>
@@ -8755,7 +8760,7 @@
                                                     Product</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/products/65863bafba46a899ad1280bf
+                                                {{URL}}/products/65863bafba46a899ad1280bf
                                             </h4>
                                         </a>
                                     </div>
@@ -8791,6 +8796,7 @@
                                                     Reviews</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
+                                                {{URL}}/products/65863bf3ba46a899ad1280c3/reviews
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Product-GetSingleProductReviews class="panel-collapse collapse">
@@ -8820,7 +8826,7 @@
                                                     Reviews</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/reviews
+                                                {{URL}}/reviews
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Review-GetAllReviews class="panel-collapse collapse">
@@ -8836,7 +8842,7 @@
                                                     Review</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/reviews/658a3dd632eadc829de583a2
+                                                {{URL}}/reviews/658a3dd632eadc829de583a2
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Review-GetSingleReview class="panel-collapse collapse">
@@ -8852,15 +8858,15 @@
                                                     Review</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/reviews
+                                                {{URL}}/reviews
                                             </h4>
                                         </a>
                                     </div>
                                     <div id=collapse-Review-CreateReview class="panel-collapse collapse">
                                         <div class=panel-body>
                                             <h5 class="label label-primary">Body</h5><span
-                                                class=resp-prettyprint>{&#34;product&#34;:&#34;65863bafba46a899ad1280bf&#34;,&#34;rating&#34;:1,&#34;title&#34;:&#34;bad
-                                                product&#34;,&#34;comment&#34;:&#34;very bad product&#34;}</span>
+                                                class=resp-prettyprint>{&#34;product&#34;:&#34;658b24829b1cd9bfb48e8d3b&#34;,&#34;rating&#34;:1,&#34;title&#34;:&#34;
+                                                bad product&#34;,&#34;comment&#34;:&#34;bad one&#34;}</span>
                                             <div class=clearfix></div>
                                         </div>
                                     </div>
@@ -8889,7 +8895,7 @@
                                                     Review</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-danger">DELETE</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/reviews/123
+                                                {{URL}}/reviews/123
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Review-DeleteReview class="panel-collapse collapse">
@@ -8919,7 +8925,7 @@
                                                     Order</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-success">POST</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/orders
+                                                {{URL}}/orders
                                             </h4>
                                         </a>
                                     </div>
@@ -8960,7 +8966,7 @@
                                                     Orders</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/orders
+                                                {{URL}}/orders
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Order-GetallOrders class="panel-collapse collapse">
@@ -8976,6 +8982,7 @@
                                                     order</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
+                                                {{URL}}/orders/658cdec3db83c68eac07ed9e
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Order-Getsingleorder class="panel-collapse collapse">
@@ -8983,19 +8990,27 @@
                                     </div>
                                 </div>
                                 <div class="panel panel-warning" id=jump-Order-UpdateOrders>
-                                    <div class=panel-heading><small class="pull-right text-muted"></small><a
-                                            class=text-warning data-toggle=collapse data-parent=#accordion-Order
+                                    <div class=panel-heading><small class="pull-right text-muted">raw</small>
+                                        <a class=text-warning data-toggle=collapse data-parent=#accordion-Order
                                             href=#collapse-Order-UpdateOrders>
                                             <h4 class=panel-title><span
                                                     class="glyphicon glyphicon-plus"></span><strong>Update
                                                     Orders</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-warning">PATCH</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/orders/123
+                                                {{URL}}/orders/658cdf74db83c68eac07eda4
                                             </h4>
-                                        </a></div>
+                                        </a>
+                                    </div>
                                     <div id=collapse-Order-UpdateOrders class="panel-collapse collapse">
-                                        <div class=panel-body></div>
+                                        <div class=panel-body>
+                                            <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+                                                &#34;shippingFee&#34;:500,
+                                                &#34;status&#34;:&#34;paid&#34;,
+                                                &#34;tax&#34;:200
+                                                }</span>
+                                            <div class=clearfix></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="panel panel-danger" id=jump-Order-DeleteOrder>
@@ -9007,7 +9022,7 @@
                                                     Order</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-danger">DELETE</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/orders/123
+                                                {{URL}}/orders/658cdf74db83c68eac07eda4
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Order-DeleteOrder class="panel-collapse collapse">
@@ -9023,7 +9038,7 @@
                                                     orders</strong> &nbsp;|&nbsp;
                                                 <strong class="request-method border-info">GET</strong>
                                                 &nbsp;
-                                                https://ecommerce-temp-125m.onrender.com/api/v1/orders/showallmyorders
+                                                {{URL}}/orders/showallmyorders
                                             </h4>
                                         </a></div>
                                     <div id=collapse-Order-GetcurrentUserorders class="panel-collapse collapse">
@@ -9050,7 +9065,7 @@
                             <tbody>
                                 <tr>
                                     <td>URL
-                                    <td>https://ecommerce-temp-125m.onrender.com/api/v1
+                                    <td>http://localhost:5000/api/v1
                                     <td>
                         </table>
                         <div class=clearfix></div>
@@ -9059,12 +9074,12 @@
             </div>
         </div>
     </div>
-    <script src="browser-app.js"> </script>
+    <script src="" browser-app.js></script>>
     <footer class="navbar-default navbar-fixed-bottom">
         <div class=container-fluid>
             <div class="span12 text-center"><span data-toggle=tooltip
                     title="If the application help you, please feel free to give a star to the project in github. Your star inspire me to work more on open-source projects like this!">Generated
-                    at 2023-12-28 15:22:14 by <a href=https://github.com/thedevsaddam/docgen target=_blank
+                    at 2023-12-28 16:16:08 by <a href=https://github.com/thedevsaddam/docgen target=_blank
                         class=text-muted>docgen</a></span></div>
         </div>
     </footer>
